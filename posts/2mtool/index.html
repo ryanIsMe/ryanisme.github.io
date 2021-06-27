@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Tool mở server Minecraft và đồng bộ lên nhiều máy tính | ryanIsMe</title>
+<meta name="keywords" content="" />
+<meta name="description" content="yeah, nhớ đọc kĩ hướng dẫn sử dụng trước khi dùng...">
+<meta name="author" content="Ryan">
+<link rel="canonical" href="https://ryanisme.github.io/posts/2mtool/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.35cd0f65a15cafa92372b8313deef5960aae04b90ad722f2bbf509eb0468137e.css" integrity="sha256-Nc0PZaFcr6kjcrgxPe71lgquBLkK1yLyu/UJ6wRoE34=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://ryanisme.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ryanisme.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ryanisme.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ryanisme.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ryanisme.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.84.1" />
+<meta property="og:title" content="Tool mở server Minecraft và đồng bộ lên nhiều máy tính" />
+<meta property="og:description" content="yeah, nhớ đọc kĩ hướng dẫn sử dụng trước khi dùng..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ryanisme.github.io/posts/2mtool/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-27T08:26:11&#43;07:00" />
+<meta property="article:modified_time" content="2021-06-27T08:26:11&#43;07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tool mở server Minecraft và đồng bộ lên nhiều máy tính"/>
+<meta name="twitter:description" content="yeah, nhớ đọc kĩ hướng dẫn sử dụng trước khi dùng..."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://ryanisme.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Tool mở server Minecraft và đồng bộ lên nhiều máy tính",
+      "item": "https://ryanisme.github.io/posts/2mtool/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tool mở server Minecraft và đồng bộ lên nhiều máy tính",
+  "name": "Tool mở server Minecraft và đồng bộ lên nhiều máy tính",
+  "description": "yeah, nhớ đọc kĩ hướng dẫn sử dụng trước khi dùng...",
+  "keywords": [
+    
+  ],
+  "articleBody": "Minecraft Multiplayer Tool v1.0 Sử dụng Dropbox, Rclone, playit\n 1. Giới thiệu Nếu bạn không có đủ tiền để thuê server thì việc tự host rồi sau đó port-forwarding để chia sẽ cho bạn bè cùng join thì rất bình thường. Nhưng việc đó thường xảy ra vấn đề là mỗi lần bạn của bạn muốn chơi thì phải nhờ bạn mở server và không phải khi nào bạn cũng rãnh và máy cũng mở 24/24. Do đó Minecraft Multiplayer Tool ra đời giúp bạn xử lí vấn đề trên.\n 2.Nguyên lí hoạt động Tool này giúp đồng bộ server minecraft của bạn lên máy tính của từng thành viên trong nhóm (với số lượng thành viên ít) để mỗi lần người đó muốn chơi không cần nhờ bạn host server Tool sử dụng Dropbox làm nơi chứa server sau đó mỗi lần bạn muốn chơi tool sẽ download file server mới nhất (bằng rclone) rồi bắt đầu host server như bình thường sau đó port-forwarding bằng playit. Sau khi bạn tắt server thì máy sẽ up file server đó lên.\n 3.Cách cài đặt Download tại đây\nXem hướng dẫn tại đây\nLưu Ý  Chỉ phù hợp cho Windows Để start server cần bỏ file jar vào thư mục Server để khởi tạo server (phải đặt tên là server.jar) Trang web bật lên trong quá trình run server có chứa đường link bên dưới là link để vào server. (Link có dạng ABC.auto.playit.gg) Để tránh tình trạng bị xung đột server thì mỗi lần muốn chơi vào game coi vào server được không mới chạy file Minecraft Multiplayer TOOL.exe File java chạy server cần được đặt bỏ vào thư mục server và đặt tên server.jar   4.Các chức năng cần biết  Turn on/off menu : Ẩn hiện file đang chạy Server Ram option : Chỉnh sửa ram cung cấp để chạy server Upload : Để up server lên dropbox trong trường hợp up bị lỗi Download : Để down server từ dropbox về máy trong trường hợp down bị lỗi  ",
+  "wordCount" : "339",
+  "inLanguage": "en",
+  "datePublished": "2021-06-27T08:26:11+07:00",
+  "dateModified": "2021-06-27T08:26:11+07:00",
+  "author":{
+    "@type": "Person",
+    "name": "Ryan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ryanisme.github.io/posts/2mtool/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ryanIsMe",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ryanisme.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ryanisme.github.io" accesskey="h" title="ryanIsMe (Alt + H)">ryanIsMe</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ryanisme.github.io/archives/" title="archives">
+                    <span>archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ryanisme.github.io/categories/" title="categories">
+                    <span>categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ryanisme.github.io/search/" title="search (Alt &#43; /)" accesskey=/>
+                    <span>search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ryanisme.github.io">Home</a>&nbsp;»&nbsp;<a href="https://ryanisme.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Tool mở server Minecraft và đồng bộ lên nhiều máy tính
+    </h1>
+    <div class="post-description">
+      yeah, nhớ đọc kĩ hướng dẫn sử dụng trước khi dùng...
+    </div>
+    <div class="post-meta">June 27, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ryan
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <div class="details">Table of Contents</div>
+        </summary>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#minecraft-multiplayer-tool-v10" aria-label="Minecraft Multiplayer Tool v1.0">Minecraft Multiplayer Tool v1.0</a><ul>
+                        
+                <li>
+                    <a href="#1-gi%e1%bb%9bi-thi%e1%bb%87u" aria-label="1. Giới thiệu">1. Giới thiệu</a></li>
+                <li>
+                    <a href="#2nguy%c3%aan-l%c3%ad-ho%e1%ba%a1t-%c4%91%e1%bb%99ng" aria-label="2.Nguyên lí hoạt động">2.Nguyên lí hoạt động</a></li>
+                <li>
+                    <a href="#3c%c3%a1ch-c%c3%a0i-%c4%91%e1%ba%b7t" aria-label="3.Cách cài đặt">3.Cách cài đặt</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#l%c6%b0u-%c3%bd" aria-label="Lưu Ý">Lưu Ý</a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#4c%c3%a1c-ch%e1%bb%a9c-n%c4%83ng-c%e1%ba%a7n-bi%e1%ba%bft" aria-label="4.Các chức năng cần biết">4.Các chức năng cần biết</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="minecraft-multiplayer-tool-v10">Minecraft Multiplayer Tool v1.0<a hidden class="anchor" aria-hidden="true" href="#minecraft-multiplayer-tool-v10">#</a></h1>
+<p>Sử dụng Dropbox, Rclone, playit</p>
+<p><img loading="lazy" src="https://user-images.githubusercontent.com/51107322/123227312-aa5dfc80-d4fe-11eb-99cd-ae225fd5e125.png" alt="img"  />
+</p>
+<hr>
+<h2 id="1-giới-thiệu">1. Giới thiệu<a hidden class="anchor" aria-hidden="true" href="#1-giới-thiệu">#</a></h2>
+<p>Nếu bạn không có đủ tiền để thuê server thì việc tự host rồi sau đó port-forwarding để chia sẽ cho bạn bè cùng join thì rất bình thường. Nhưng việc đó thường xảy ra vấn đề là mỗi lần bạn của bạn muốn chơi thì phải nhờ bạn mở server và không phải khi nào bạn cũng rãnh và máy cũng mở 24/24. Do đó Minecraft Multiplayer Tool ra đời giúp bạn xử lí vấn đề trên.</p>
+<hr>
+<h2 id="2nguyên-lí-hoạt-động">2.Nguyên lí hoạt động<a hidden class="anchor" aria-hidden="true" href="#2nguyên-lí-hoạt-động">#</a></h2>
+<p>Tool này giúp đồng bộ server minecraft của bạn lên máy tính của từng thành viên trong nhóm (với số lượng thành viên ít) để mỗi lần người đó muốn chơi không cần nhờ bạn host server
+Tool sử dụng Dropbox làm nơi chứa server sau đó mỗi lần bạn muốn chơi tool sẽ download file server mới nhất (bằng rclone) rồi bắt đầu host server như bình thường sau đó port-forwarding bằng playit. Sau khi bạn tắt server thì máy sẽ up file server đó lên.</p>
+<hr>
+<h2 id="3cách-cài-đặt">3.Cách cài đặt<a hidden class="anchor" aria-hidden="true" href="#3cách-cài-đặt">#</a></h2>
+<p>Download <a href="https://drive.google.com/file/d/1aymVv3_8iVDseuyQI7bzpgQSF6G9m-Hd/view?usp=sharing" title="tại đây">tại đây</a></p>
+<p>Xem hướng dẫn <a href="https://drive.google.com/file/d/1O2GCD0swAhA2l5zxMNjDMDK9quAMZxJu/view?usp=sharing" title="tại đây">tại đây</a></p>
+<h4 id="lưu-ý">Lưu Ý<a hidden class="anchor" aria-hidden="true" href="#lưu-ý">#</a></h4>
+<ul>
+<li>Chỉ phù hợp cho Windows</li>
+<li>Để start server cần bỏ file jar vào thư mục Server để khởi tạo server (phải đặt tên là <em>server.jar</em>)</li>
+<li>Trang web bật lên trong quá trình run server có chứa đường link bên dưới là link để vào server. (Link có dạng ABC.auto.playit.gg)</li>
+<li>Để tránh tình trạng bị xung đột server thì mỗi lần muốn chơi vào game coi vào server được không mới chạy file <em>Minecraft Multiplayer TOOL.exe</em></li>
+<li>File java chạy server cần được đặt bỏ vào thư mục server và đặt tên server.jar</li>
+</ul>
+<hr>
+<h2 id="4các-chức-năng-cần-biết">4.Các chức năng cần biết<a hidden class="anchor" aria-hidden="true" href="#4các-chức-năng-cần-biết">#</a></h2>
+<ul>
+<li>Turn on/off menu : Ẩn hiện file đang chạy Server</li>
+<li>Ram option : Chỉnh sửa ram cung cấp để chạy server</li>
+<li>Upload : Để up server lên dropbox trong trường hợp up bị lỗi</li>
+<li>Download : Để down server từ dropbox về máy trong trường hợp down bị lỗi</li>
+</ul>
+
+
+  </div>
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="prev" href="https://ryanisme.github.io/posts/timereminder/">
+    <span class="title">« Prev Page</span>
+    <br>
+    <span>App nhắc nhở thời gian nghỉ mắt</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2021 <a href="https://ryanisme.github.io">ryanIsMe</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
